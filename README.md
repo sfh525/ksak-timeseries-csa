@@ -6,7 +6,7 @@ The goal is a controlled ablation of **input normalization**, with a shared expe
 
 ## Task
 
-- **Data:** SWF workload log, aggregated into fixed 15-minute slices with gap filling for idle periods.
+- **Data:** [Parallel Workloads Archive Parquet on Kaggle](https://www.kaggle.com/datasets/avtnenet/parallel-workloads-archive?select=25-LLNL-uBGL-2006-2.parquet) (`25-LLNL-uBGL-2006-2.parquet`), expected at `/kaggle/working/25-LLNL-uBGL-2006-2.parquet`; aggregated into fixed 15-minute slices with gap filling for idle periods.
 - **Target:** next-slice `num_jobs` or `total_requested_proc`.
 - **Features:** univariate (`num_jobs` or `total_requested_proc` only) or multivariate (job count plus allocated processors / run-time aggregates), selected via `FEATURE_MODE`.
 - **Model backbone (all notebooks):** LSTM 64 → Dropout → LSTM 32 → Dropout → Dense 16 → Dense 1, trained with Adam.
@@ -26,7 +26,7 @@ Shared harness details (all three):
 
 - Boundary-safe sliding windows (validation/test may use prior-split history).
 - EarlyStopping + ReduceLROnPlateau.
-- Same SWF preprocess, feature switch, window candidates, batch size, and epoch budget.
+- Same Parquet preprocess, feature switch, window candidates, batch size, and epoch budget.
 
 Intentional method differences:
 
@@ -38,7 +38,7 @@ Target space is aligned across notebooks (Approach A) so comparisons isolate **i
 
 ## How to run
 
-1. Open a notebook on Kaggle (or locally) with the SWF dataset available at the path set in the notebook.
+1. Open a notebook on Kaggle (or locally) with `25-LLNL-uBGL-2006-2.parquet` available at `/kaggle/working/25-LLNL-uBGL-2006-2.parquet` (or update `DATASET_PATH`).
 2. Set `FEATURE_MODE` to `'univariate'` or `'multivariate'`.
 3. Run all cells top to bottom (window tuning trains several short models; final training follows).
 
