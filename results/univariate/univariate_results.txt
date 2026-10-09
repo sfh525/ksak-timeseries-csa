@@ -1,1 +1,5 @@
 If you are pushing a notebook, just put you .ipynb file in this folder.
+total allocated nodes:
+-lstm-vanilla(25th log files) = https://www.kaggle.com/code/aureliorafifw/lstm-vanilla?scriptVersionId=356728960 
+-lstm-edain(25th log files) = https://www.kaggle.com/code/aureliorafifw/lstm-edain?scriptVersionId=356727408
+-lstm-dain(25th log files) = https://www.kaggle.com/code/aureliorafifw/lstm-dain?scriptVersionId=356720259
