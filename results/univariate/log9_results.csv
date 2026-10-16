@@ -1,0 +1,11 @@
+run,experiment,method,backbone,feature_mode,target,dataset,window,seed,I_MSE,I_RMSE,I_MAE,I_R2,timestamp
+06-vanilla-multi-numjobs-log09,6,Vanilla,Vanilla LSTM Adam,multivariate,num_jobs,09,60,42,2.9728,1.7242,1.0844,-0.4694,2026-10-14T07:51:56
+05-vanilla-uni-numjobs-log09,5,Vanilla,Vanilla LSTM Adam,univariate,num_jobs,09,60,42,2.8198,1.6792,1.0422,-0.3938,2026-10-14T09:06:07
+03-edain-uni-numjobs-log09,3,EDAIN,LSTM,univariate,num_jobs,09,60,42,2.7812,1.6677,1.008,-0.37,2026-10-14T18:06:42
+03-edain-uni-numjobs-log09,3,EDAIN,GRU,univariate,num_jobs,09,60,42,2.7877,1.6696,1.0058,-0.3733,2026-10-14T18:06:42
+04-edain-multi-numjobs-log09,4,EDAIN,LSTM,multivariate,num_jobs,09,60,42,3.0889,1.7575,1.0513,-0.5216,2026-10-14T18:20:31
+04-edain-multi-numjobs-log09,4,EDAIN,GRU,multivariate,num_jobs,09,60,42,2.8363,1.6841,1.0276,-0.3972,2026-10-14T18:20:31
+01-dain-uni-numjobs-log09,1,DAIN,LSTM Adam,univariate,num_jobs,09,60,42,2.9716,1.7238,0.9999,-0.4639,2026-10-16T19:24:04
+01-dain-uni-numjobs-log09,1,DAIN,GRU Adam,univariate,num_jobs,09,60,42,2.7309,1.6526,0.9459,-0.3453,2026-10-16T19:24:04
+02-dain-multi-numjobs-log09,2,DAIN,LSTM Adam,multivariate,num_jobs,09,60,42,2.8199,1.6793,1.0308,-0.3891,2026-10-16T20:03:38
+02-dain-multi-numjobs-log09,2,DAIN,GRU Adam,multivariate,num_jobs,09,120,42,2.8483,1.6877,1.0355,-0.3907,2026-10-16T20:03:38
